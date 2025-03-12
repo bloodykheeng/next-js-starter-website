@@ -55,17 +55,25 @@ const Header = () => {
                   } `}
               >
                 <Image
-                  src="/images/logo/logo-2.svg"
+                  src="/ppda/ppda_white-removebg-preview.png"
                   alt="logo"
                   width={140}
                   height={30}
+                  style={{
+                    height: "40px",
+                    width: "auto"
+                  }}
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/logo.svg"
+                  src="/ppda/ppda_fb-removebg-preview.png"
                   alt="logo"
                   width={140}
                   height={30}
+                  style={{
+                    height: "40px",
+                    width: "auto"
+                  }}
                   className="hidden w-full dark:block"
                 />
               </Link>

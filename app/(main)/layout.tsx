@@ -9,9 +9,17 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <Header />
-      {children}
-      <Footer />
+
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        {/* Main Content */}
+        <main className="flex-grow h-full">
+          {children}
+        </main>
+        {/* Footer Always at Bottom */}
+        <Footer />
+      </div>
+
     </>
   );
 }
