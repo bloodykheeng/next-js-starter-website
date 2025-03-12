@@ -7,6 +7,7 @@ import PrimeReactProvider from "@/providers/PrimeReactProvider"
 import { PrimeReactToastProvider } from "@/providers/PrimeReactToastProvider"
 import TanstackProvider from "@/providers/TanstackProvider"
 import { AuthProvider } from "@/providers/AuthProvider"
+import { SidebarProvider } from "@/providers/SidebarContextProvider"
 
 import { cookies } from "next/headers";
 import NextJsProgressBar from '@/utils/NextJsProgressBar'
@@ -48,9 +49,11 @@ export default function RootLayout({
             <PrimeReactToastProvider>
               <TanstackProvider>
                 <AuthProvider>
+                  <SidebarProvider>
 
-                  {children}
+                    {children}
 
+                  </SidebarProvider>
                 </AuthProvider>
               </TanstackProvider>
             </PrimeReactToastProvider>
