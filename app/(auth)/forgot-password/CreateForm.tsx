@@ -53,8 +53,8 @@ function CreateForm() {
   return (
     <>
 
-      <div className="flex items-center justify-center h-screen bg-gray-100">
-        <div className="w-full sm:w-96 md:w-[28rem] lg:w-[32rem] shadow-lg rounded-lg bg-white p-6">
+      <div className="flex items-center justify-center h-screen bg-gray-100 dark:bg-gray-900">
+        <div className="w-full sm:w-96 md:w-[28rem] lg:w-[32rem] shadow-lg rounded-lg bg-white dark:bg-gray-800 p-6">
           <div className="flex flex-wrap flex-col items-center justify-center gap-3 text-center mb-1 w-full">
             <Image
               src="/ppda/ppda_white-removebg-preview.png"
@@ -72,7 +72,7 @@ function CreateForm() {
               style={{ height: "40px", width: "auto" }}
               className="hidden w-full dark:block"
             />
-            <span className="text-gray-900 text-3xl font-medium mb-3">Forgot Password</span>
+            <span className="text-gray-900 dark:text-gray-100 text-3xl font-medium mb-3">Forgot Password</span>
           </div>
 
           <RowForm handleFormSubmit={handleSubmit} formMutation={creactMutation} />

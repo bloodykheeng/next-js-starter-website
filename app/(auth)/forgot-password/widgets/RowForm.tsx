@@ -80,7 +80,7 @@ const RowForm: React.FC<{ handleFormSubmit: (FormData: FormData | null) => any, 
       {/* Email */}
       <div className="w-full flex justify-center">
         <div className="w-full">
-          <label className="block text-gray-900 font-medium mb-1">Email</label>
+          <label className="block text-gray-900 dark:text-gray-100 font-medium mb-1">Email</label>
           <Controller
             name="email"
             control={control}

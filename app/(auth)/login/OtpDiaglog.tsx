@@ -170,9 +170,9 @@ const OtpDiaglog: React.FC<OtpPageProps> = ({
                 <div
                     className="rounded-[56px] p-[0.3rem] bg-gradient-to-b from-primary to-transparent"
                 >
-                    <div className="w-full bg-white py-8 px-5 sm:px-8 rounded-[53px] shadow-lg">
+                    <div className="w-full bg-white dark:bg-gray-800 py-8 px-5 sm:px-8 rounded-[53px] shadow-lg">
                         <div className="text-center mb-5">
-                            <h3 className="text-gray-900 font-medium text-xl">OTP Verification</h3>
+                            <h3 className="text-gray-900 dark:text-gray-100 font-medium text-xl">OTP Verification</h3>
                         </div>
 
                         <form onSubmit={handleSubmit(onSubmit)} className="w-full">

@@ -94,8 +94,8 @@ const LoginPage = () => {
     return (
         <>
 
-            <div className="flex items-center justify-center h-screen bg-gray-100">
-                <div className="w-full sm:w-96 md:w-[28rem] lg:w-[32rem] shadow-lg rounded-lg bg-white p-6">
+            <div className="flex items-center justify-center h-screen bg-gray-100 dark:bg-gray-900">
+                <div className="w-full sm:w-96 md:w-[28rem] lg:w-[32rem] shadow-lg rounded-lg bg-white dark:bg-gray-800 p-6">
                     <div className="text-center mb-6">
                         <Image
                             src="/ppda/ppda_white-removebg-preview.png"
@@ -113,7 +113,7 @@ const LoginPage = () => {
                             style={{ height: "40px", width: "auto" }}
                             className="hidden w-full dark:block"
                         />
-                        <h2 className="text-gray-900 text-3xl font-semibold mb-2">Login</h2>
+                        <h2 className="text-gray-900 dark:text-gray-100 text-3xl font-semibold mb-2">Login</h2>
                         {/* <p className="text-gray-600 text-sm">
                             Don't have an account?
                             <Link href="/register" className="ml-2 text-blue-500 hover:underline">
@@ -125,7 +125,7 @@ const LoginPage = () => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         {/* Email Field */}
                         <div className="mb-4">
-                            <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                            <label htmlFor="email" className="block text-sm font-semibold text-gray-700 dark:text-gray-100 mb-2">
                                 Email
                             </label>
                             <Controller
@@ -147,7 +147,7 @@ const LoginPage = () => {
 
                         {/* Password Field */}
                         <div className="mb-4">
-                            <label htmlFor="password" className="block text-sm font-semibold text-gray-700 mb-2">
+                            <label htmlFor="password" className="block text-sm font-semibold text-gray-700 dark:text-gray-100 mb-2">
                                 Password
                             </label>
                             <Controller
@@ -166,9 +166,21 @@ const LoginPage = () => {
                                         onChange={(e) => field.onChange(e.target.value)}
                                         value={field.value || ""}
                                         pt={{
-                                            iconField: { root: { style: { width: "100%", } } },
-                                            input: { style: { width: "100%", right: "20rem" } },
-                                            root: { style: { width: "100%" } },
+                                            iconField: {
+                                                root: {
+                                                    style: { width: "100%", },
+
+                                                },
+                                                style: { width: "100%", },
+                                            },
+                                            input: {
+                                                style: { width: "100%", },
+                                            },
+                                            root: {
+                                                style: { width: "100%" },
+                                            },
+                                            showIcon: { style: { right: "0.2rem", } },
+                                            hideIcon: { style: { right: "0.2rem", } },
                                         }}
                                     />
                                 )}
@@ -185,7 +197,7 @@ const LoginPage = () => {
                                     checked={checked}
                                     className="mr-2"
                                 />
-                                <label htmlFor="rememberme" className="text-gray-700 text-sm">
+                                <label htmlFor="rememberme" className="text-gray-700 dark:text-gray-100 text-sm">
                                     Remember me
                                 </label>
                             </div>
