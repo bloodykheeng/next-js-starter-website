@@ -3,10 +3,10 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <>
-      <section
+      <div
         id="home"
         // className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
-        className="relative z-10 overflow-hidden bg-white pb-5 pt-[120px] dark:bg-gray-dark flex items-center justify-center h-full min-h-[calc(100vh-89px)]"
+        className="relative z-10 overflow-hidden  flex items-center justify-center flex-grow "
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -226,7 +226,7 @@ const Hero = () => {
             </defs>
           </svg>
         </div>
-      </section>
+      </div>
     </>
   );
 };

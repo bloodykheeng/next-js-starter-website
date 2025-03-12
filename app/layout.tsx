@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "primereact/resources/themes/lara-light-blue/theme.css";
 
 import { ThemeProvider } from '@/providers/ThemeProvider'
+import PrimeReactProvider from "@/providers/PrimeReactProvider"
+
 import { cookies } from "next/headers";
+import NextJsProgressBar from '@/utils/NextJsProgressBar'
 
 import { Inter } from "next/font/google";
 
@@ -31,9 +35,15 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <link id="theme-link" rel="stylesheet" href="/themes/lara-light-blue/theme.css" />
+      </head>
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+        <NextJsProgressBar />
         <ThemeProvider defaultTheme={defaultTheme}>
-          {children}
+          <PrimeReactProvider>
+            {children}
+          </PrimeReactProvider>
         </ThemeProvider>
       </body>
     </html>

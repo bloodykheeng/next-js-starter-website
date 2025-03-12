@@ -11,10 +11,12 @@ import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
-  // other metadata
+  title: "Contract Monitoring System (CMS)",
+  description: "A platform for tracking and monitoring government contracts to ensure transparency and accountability.",
+  keywords: ["Contract Monitoring", "CMS", "Government Projects", "Transparency", "Accountability", "PPDA"],
+  robots: "index, follow",
 };
+
 
 export default function Home() {
   return (
