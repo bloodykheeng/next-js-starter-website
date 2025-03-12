@@ -5,6 +5,8 @@ import { PrimeReactProvider } from 'primereact/api';
 import { PrimeReactContext } from "primereact/api";
 import { useTheme } from "./ThemeProvider";
 
+import Tailwind from 'primereact/passthrough/tailwind';
+
 function ThemeSync() {
     const { theme } = useTheme(); // Get theme from next-themes
 
@@ -34,7 +36,7 @@ export default function PrimeReactProviders({ children }: { children: React.Reac
 
 
     return (
-        <PrimeReactProvider value={{ unstyled: false, }}>
+        <PrimeReactProvider value={{ unstyled: false, pt: Tailwind }}>
             <ThemeSync />
             {children}
         </PrimeReactProvider>

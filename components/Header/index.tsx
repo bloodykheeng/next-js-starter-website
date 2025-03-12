@@ -171,19 +171,19 @@ const Header = () => {
 
               {/* Mobile-only sign in/up */}
               <div className="mt-4 border-t pt-4 lg:hidden">
-                <Link
+                {/* <Link
                   href="/signin"
                   className="block w-full text-center py-2 text-base font-medium text-dark hover:opacity-70 dark:text-white"
                   onClick={closeMenus}
                 >
                   Sign In
-                </Link>
+                </Link> */}
                 <Link
-                  href="/signup"
+                  href="/login"
                   className="block w-full text-center mt-2 bg-primary py-2 rounded text-white font-medium hover:bg-opacity-90"
                   onClick={closeMenus}
                 >
-                  Sign Up
+                  Login
                 </Link>
               </div>
 
@@ -195,17 +195,17 @@ const Header = () => {
 
             {/* Desktop sign in/up */}
             <div className="hidden lg:flex items-center">
-              <Link
+              {/* <Link
                 href="/signin"
                 className="px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white"
               >
                 Sign In
-              </Link>
+              </Link> */}
               <Link
-                href="/signup"
+                href="/login"
                 className="ease-in-up shadow-btn hover:shadow-btn-hover rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90"
               >
-                Sign Up
+                Login
               </Link>
 
               {/* Desktop theme toggle */}

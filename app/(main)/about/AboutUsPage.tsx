@@ -8,8 +8,9 @@ import { Card } from 'primereact/card';
 const AboutUsPage = () => {
     return (
         <>
-            <div className="container p-1 mx-auto">
-                <Card className="shadow-2 p-1">
+
+            <Card>
+                <div className="text-black dark:text-white">
                     <h1 className="text-3xl font-bold mb-4">About the Contract Monitoring System (CMS)</h1>
                     <p className="mb-6">
                         The Contract Monitoring System (CMS) is an online platform that enables Civil Society Organizations (CSOs) to monitor ongoing government projects and contracts.
@@ -78,9 +79,11 @@ const AboutUsPage = () => {
                             <li>Helpline: <strong>0414311163</strong></li>
                         </ul>
                     </section>
+                </div>
 
-                </Card>
-            </div>
+
+            </Card>
+
         </>
     );
 };

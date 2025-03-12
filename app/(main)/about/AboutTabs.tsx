@@ -10,7 +10,7 @@ const AboutTabs: React.FC = () => {
         <div className="md:p-1">
             <TabView>
                 {/* About Us Tab */}
-                <TabPanel header="About Us">
+                <TabPanel header="About Us" className="dark:bg-dark">
                     <AboutUsPage />
                 </TabPanel>
 

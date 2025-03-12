@@ -4,6 +4,9 @@ import "primereact/resources/themes/lara-light-blue/theme.css";
 
 import { ThemeProvider } from '@/providers/ThemeProvider'
 import PrimeReactProvider from "@/providers/PrimeReactProvider"
+import { PrimeReactToastProvider } from "@/providers/PrimeReactToastProvider"
+import TanstackProvider from "@/providers/TanstackProvider"
+import { AuthProvider } from "@/providers/AuthProvider"
 
 import { cookies } from "next/headers";
 import NextJsProgressBar from '@/utils/NextJsProgressBar'
@@ -42,7 +45,15 @@ export default function RootLayout({
         <NextJsProgressBar />
         <ThemeProvider defaultTheme={defaultTheme}>
           <PrimeReactProvider>
-            {children}
+            <PrimeReactToastProvider>
+              <TanstackProvider>
+                <AuthProvider>
+
+                  {children}
+
+                </AuthProvider>
+              </TanstackProvider>
+            </PrimeReactToastProvider>
           </PrimeReactProvider>
         </ThemeProvider>
       </body>
