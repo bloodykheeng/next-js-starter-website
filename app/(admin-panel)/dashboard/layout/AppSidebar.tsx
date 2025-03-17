@@ -28,42 +28,93 @@ type NavItem = {
   subItems?: { name: string; path: string; pro?: boolean; new?: boolean }[];
 };
 
+// const navItems: NavItem[] = [
+//   {
+//     icon: <GridIcon />,
+//     name: "Dashboard",
+//     subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+//   },
+//   {
+//     icon: <CalenderIcon />,
+//     name: "Calendar",
+//     path: "/calendar",
+//   },
+//   {
+//     icon: <UserCircleIcon />,
+//     name: "User Profile",
+//     path: "/profile",
+//   },
+
+//   {
+//     name: "Forms",
+//     icon: <ListIcon />,
+//     subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+//   },
+//   {
+//     name: "Tables",
+//     icon: <TableIcon />,
+//     subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
+//   },
+//   {
+//     name: "Pages",
+//     icon: <PageIcon />,
+//     subItems: [
+//       { name: "Blank Page", path: "/blank", pro: false },
+//       { name: "404 Error", path: "/error-404", pro: false },
+//     ],
+//   },
+// ];
+
 const navItems: NavItem[] = [
   {
-    icon: <GridIcon />,
+    icon: <i className="pi pi-objects-column" />,
     name: "Dashboard",
-    subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+    path: "/dashboard",
   },
   {
-    icon: <CalenderIcon />,
-    name: "Calendar",
-    path: "/calendar",
+    icon: <i className="pi pi-chart-bar" />,
+    name: "Polls",
+    path: "/polls",
   },
   {
-    icon: <UserCircleIcon />,
-    name: "User Profile",
-    path: "/profile",
+    icon: <i className="pi pi-briefcase" />,
+    name: "Projects",
+    path: "/projects",
+  },
+  {
+    icon: <i className="pi pi-users" />,
+    name: "CSOs",
+    path: "/csos",
+  },
+  {
+    icon: <i className="pi pi-bell" />,
+    name: "Notifications",
+    path: "/notifications",
   },
 
   {
-    name: "Forms",
-    icon: <ListIcon />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+    icon: <i className="pi pi-user" />,
+    name: "Users",
+    path: "/users",
   },
   {
-    name: "Tables",
-    icon: <TableIcon />,
-    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
-  },
-  {
-    name: "Pages",
-    icon: <PageIcon />,
+    icon: <i className="pi pi-cog" />,
+    name: "Settings",
     subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
+      { name: "Districts", path: "/settings/districts" },
+      { name: "Tags", path: "/settings/tags" },
+      { name: "PDES", path: "/settings/pdes" },
+      { name: "Regional Offices", path: "/settings/regions" },
+      { name: "Roles", path: "/settings/roles" },
     ],
   },
+  {
+    icon: <i className="pi pi-book" />,
+    name: "User Manual",
+    path: "/manual",
+  },
 ];
+
 
 const othersItems: NavItem[] = [
   {
@@ -302,7 +353,7 @@ const AppSidebar: React.FC = () => {
         <Link href="/">
           {isExpanded || isHovered || isMobileOpen ? (
             <>
-              <Image
+              {/* <Image
                 className="dark:hidden"
                 src="/images/logo/logo.svg"
                 alt="Logo"
@@ -315,15 +366,45 @@ const AppSidebar: React.FC = () => {
                 alt="Logo"
                 width={150}
                 height={40}
+              /> */}
+
+              <Image
+                src="/ppda/ppda_white-removebg-preview.png"
+                alt="logo"
+                width={140}
+                height={30}
+                style={{ height: "40px", width: "auto" }}
+                className="w-full dark:hidden"
+              />
+              <Image
+                src="/ppda/ppda_fb-removebg-preview.png"
+                alt="logo"
+                width={140}
+                height={30}
+                style={{ height: "40px", width: "auto" }}
+                className="hidden w-full dark:block"
               />
             </>
           ) : (
-            <Image
-              src="/images/logo/logo-icon.svg"
-              alt="Logo"
-              width={32}
-              height={32}
-            />
+            <>
+              <Image
+                src="/ppda/ppda_white-removebg-preview.png"
+                alt="logo"
+                width={80}
+                height={30}
+                style={{ height: "40px", width: "auto" }}
+                className="w-full dark:hidden"
+              />
+              <Image
+                src="/ppda/ppda_fb-removebg-preview.png"
+                alt="logo"
+                width={80}
+                height={30}
+                style={{ height: "40px", width: "auto" }}
+                className="hidden w-full dark:block"
+              />
+            </>
+
           )}
         </Link>
       </div>
@@ -346,7 +427,7 @@ const AppSidebar: React.FC = () => {
               {renderMenuItems(navItems, "main")}
             </div>
 
-            <div className="">
+            {/* <div className="">
               <h2
                 className={`mb-4 text-xs uppercase flex leading-[20px] text-gray-400 ${!isExpanded && !isHovered
                   ? "lg:justify-center"
@@ -360,7 +441,7 @@ const AppSidebar: React.FC = () => {
                 )}
               </h2>
               {renderMenuItems(othersItems, "others")}
-            </div>
+            </div> */}
           </div>
         </nav>
         {isExpanded || isHovered || isMobileOpen ? <SidebarWidget /> : null}

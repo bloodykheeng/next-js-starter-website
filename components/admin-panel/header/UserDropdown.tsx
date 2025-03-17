@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Dropdown } from "@/ui/dropdown/Dropdown";
 import { DropdownItem } from "@/ui/dropdown/DropdownItem";
+import { Avatar } from "primereact/avatar";
 
 export default function UserDropdown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,16 +23,22 @@ export default function UserDropdown() {
         onClick={toggleDropdown}
         className="flex items-center text-gray-700 dark:text-gray-400 dropdown-toggle"
       >
-        <span className="mr-3 overflow-hidden rounded-full h-11 w-11">
-          <Image
+        <span className="mr-3 overflow-hidden rounded-full h-11 w-11 flex justify-center items-center">
+          {/* <Image
             width={44}
             height={44}
             src="/images/user/owner.jpg"
             alt="User"
-          />
+          /> */}
+          <Avatar icon="pi pi-user" shape="circle" size="large" />
         </span>
 
-        <span className="block mr-1 font-medium text-theme-sm">Musharof</span>
+        <span
+          className="block mr-1 font-medium text-theme-sm max-w-[10ch] truncate cursor-pointer"
+          title="Musharof"
+        >
+          Musharof
+        </span>
 
         <svg
           className={`stroke-gray-500 dark:stroke-gray-400 transition-transform duration-200 ${isOpen ? "rotate-180" : ""
